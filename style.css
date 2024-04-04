@@ -1,0 +1,509 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+-webkit-box-shadow: 18px 20px 0px 0px rgba(126,223,212,1);
+-moz-box-shadow: 18px 20px 0px 0px rgba(126,223,212,1);
+box-shadow: 18px 20px 0px 0px rgba(126,223,212,1);border:2px solid #7edfd4;text-transform:uppercase;font-size:10px;
+}
+
+.containerb {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;border:2px solid #f1f1f1;text-transform:uppercas;font: size 16px;margin-top:100px;padding-bottom:40px;border:1px solid #BCBCBC;
+}
+.containerb v{color:#5FCB20;}
+.containerb img{width:70px;float:center;padding:0px;margin-top:-60px;margin-left:auto;margin-right:auto;}
+
+.containerba {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;border:2px solid #f1f1f1;text-transform:uppercase;font-size:10px;margin-top:-15px;border:1px solid #BCBCBC;font-size:12px;text-align:center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.appliance {margin-bottom:10px;}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #7edfd4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.explanation {
+    background-color: #d3f7d5; /* Cor de fundo verde claro */
+    border: 1px solid #28a745; /* Cor da borda */
+    padding: 10px;border-radius:10px;
+    margin-top: 20px; /* Espaçamento superior */
+    display: none; /* Inicialmente oculto */
+}
+
+.solar-result {
+    background-color: #fff3cd; /* Cor de fundo amarelo claro */
+    border: 1px solid #ffc107; /* Cor da borda */
+    padding: 10px;
+    margin-top: 20px; /* Espaçamento superior */
+    display: none; border-radius:10px;
+}
+
+        body {
+    font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }   
+
+
+        .warning-bar {
+            background-color: #FF972F;
+            color: #333;
+            padding: 12px;
+            text-align: center;
+            position: fixed; /* Posição fixa */
+            top: 0; /* Fixado no topo */
+            left: 0;
+            width: 100%;
+            z-index: 99999; text-transform:uppercase;font-size:12px;
+        }
+
+        .site-description {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+        .menu-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; /* Para alinhar a logo e o botão */
+            align-items: center;
+            height: 60px;
+            padding: 0 20px; /* Adicionando espaço ao redor dos elementos */
+padding-top:60px;-webkit-transition: all 0.2s linear; -webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;transition: all 0.2s linear;
+        }
+
+        .menu-fixed nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%; /* Ajuste a largura conforme necessário */
+        }
+
+        .menu-fixed nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto */
+            text-transform: uppercase; /* Transformando o texto em maiúsculas */
+        }
+
+        .menu-fixed nav ul li {
+            display: inline-block;
+            margin-right: 0px;
+        }
+
+        .menu-fixed nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 19px;
+            display: block;
+            position: relative; /* Permitir a aplicação de um traço */
+        }
+
+        .menu-fixed nav ul li a:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: #7edfd4;
+            bottom: -32px;
+            left: 0;
+        }
+
+        .menu-fixed .logo img {
+            width: 200px;height:20px;
+        }
+
+
+        .blue-section {
+            background-color: #7edfd4; /* Cor azul clara */
+            width: 100%;
+
+            z-index: 2;padding-bottom:30px;padding-top:30px;
+        }
+
+        .blue-section-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px; /* Defina a largura máxima conforme necessário */
+            margin: 0 auto; /* Centraliza o conteúdo */
+            padding: 0 20px; color:#fff;text-align: justify;padding-bottom:30px; }
+
+        .blue-section img {
+            width: 250px; /* Defina a largura da imagem conforme necessário */
+            margin-right: 20px; /* Adiciona espaçamento entre a imagem e o texto */
+        }
+
+        .blue-section-text p {
+            flex-grow: 1; /* Faz o texto ocupar o restante do espaço disponível */
+            font-size: 17px;
+            color: #333333;
+        }
+
+
+
+
+.economy-tips {
+    background-color: #7edfd4; /* Cor de fundo azul claro */
+    padding: 40px 20px; /* Espaçamento interno */
+    text-align: center;margin-top:50px
+}
+.economy-tips h2{
+text-transform:uppercase;font-size:11px;
+}
+
+.tip {width:270px;margin-top:17px;}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espaçamento inferior entre ícones e texto */
+}
+
+.icon-container .icon-wrapper {
+    margin: 0 10px; /* Espaçamento lateral entre ícones */
+}
+
+.icon-container img {
+    width: 50px; /* Tamanho dos ícones */
+}
+
+.tip-text {
+    font-size: 13px;
+    color: #fff;margin-bottom:40px;
+}
+
+
+
+.centered-content {
+    max-width: 1200px; /* Defina a largura máxima conforme necessário */
+    margin: 0 auto; /* Centralize horizontalmente */
+    text-align: center; margin-top:100px;
+}
+
+.centered-content h2 {
+    font-size: 24px; /* Tamanho do título */
+    color: #333; /* Cor do texto */
+margin-top:-65px;text-transform:uppercase;margin-bottom:60px;
+}
+
+.centered-content h3 {font-size:40px;float:center;color:#b1dfd4;text-transform:uppercase;margin-left:auto;margin-right:auto;float:center;margin-top:0px;}
+
+
+
+.fundoc {position:absolute;margin-top:-460px;z-index:-9999999;opacity:0.1;}
+.fundoc img {width:500px;}
+
+.hea {
+    padding: 40px 20px; /* Espaçamento interno */
+    text-align: center;
+    color: #fff; /* Cor do texto */
+    background-image: url('https://iili.io/JXTrAFf.png'); /* Imagem de fundo */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
+    background-repeat: no-repeat;
+background-color:#fff;
+    height: 300px;
+    margin-top: 92px;
+    background-position: center calc(50% - 100px); margin-bottom:-25px;
+}
+
+
+        .navbar {
+            overflow: hidden;
+            background-color: #fff; /* Cor de fundo do menu */
+            position: fixed; /* Torna o menu fixo */
+            top: 0; /* Coloca o menu no topo da página */
+            width: 100%; /* Largura total */
+            z-index: 1000; margin-top:38px;            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-logo {
+            float: left; /* Alinha a logo à esquerda */
+            padding: 16px; /* Espaçamento interno */
+            text-decoration: none; /* Remove a sublinhado padrão */
+            color: #000; /* Cor do texto */
+            font-size: 20px; /* Tamanho da fonte */
+        }
+
+        .navbar-right {
+            float: right;margin-right:90px;MARGIN-TOP:20PX; /
+        }
+
+        .navbar-button {
+            background-color: #fff; /* Cor de fundo do botão */
+            color:#4CAF50; /* Cor do texto do botão */
+            border: 1px solid #4CAF50; /* Remove a borda do botão */
+            padding:10px; /* Espaçamento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+            text-decoration: none;margin-top:20px;border-radius:5px;text-transform:uppercase;-webkit-transition: all 0.2s linear; -webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;transition: all 0.2s linear;
+        }
+
+        .navbar-button:hover {
+            background-color: #45a049; /* Cor de fundo do botão ao passar o mouse */
+color:#fff;
+        }
+
+
+        .container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+margin-top:-50px;
+        }
+        .container2 h3 {color:#000;display:block;margin-right:50px;border-bottom:2px solid #000;padding-bottom:17px;margin-top:100px}
+
+        .box {
+            width: 400px;
+
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;font-size:14px;padding:30px;            text-align: justify;height:190px;
+        }
+
+.box img{width:50px;}
+.box2 img{width:50px;}
+        .box2 {
+            width: 400px;
+            background-color: #ffffcc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;font-size:14px;padding:30px;            text-align: justify;height:190px;
+        }
+
+.faq-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;width:800px;margin-left:auto;margin-right:auto;
+}
+
+.faq-question {
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    padding: 10px;
+    display: none;
+}
+
+.toggle-btn {
+    font-weight: bold;
+    font-size: 20px;
+}
+.faq-answer.show-answer {
+    display: block; /* Certifica-se de que a resposta seja exibida quando a classe show-answer for aplicada */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.show-answer {
+    max-height: 1000px; /* Ou um valor suficientemente grande para acomodar o conteúdo */
+}
+
+h6 {margin-top:60px;margin-left:auto;margin-right:auto;font-size:22px;border-bottom:2px solid #000;padding-bottom:20px;}
+
+.containeras {
+    max-width: 750px;
+    margin: 50px auto;
+    text-align: center;background:#fff;padding:20px;border-radius:20px;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+.mostra {background:#fff;width:100%;}
+
+
+         /* Estilos para o footer */
+        footer {
+            background-color: #f2f2f2; /* Cor de fundo do footer */
+            padding: 80px 0; /* Preenchimento interno do footer */
+            text-align: center; /* Alinhamento central do conteúdo */
+        }
+
+        /* Estilos para as colunas */
+        .footer-columns {
+            display: flex; /* Utiliza flexbox para alinhar as colunas */
+            justify-content: center; /* Alinha as colunas ao centro */
+            align-items: center; /* Alinha os itens verticalmente */
+        }
+
+        /* Estilos para a primeira coluna (logo) */
+        .footer-column.logo {
+            flex: 1; /* Expande para ocupar a mesma largura que as outras colunas */
+        }
+
+        /* Estilos para as colunas de links */
+        .footer-column.links {
+            flex: 0.4; /* Ocupa duas vezes mais espaço que a primeira coluna */
+            display: flex;
+            flex-direction: column; /* Alinha os links em uma coluna */
+            align-items: flex-start; /* Alinha os links à esquerda */
+            gap: 5px; /* Espaçamento entre os links */
+        }
+
+        /* Estilos para os links */
+        .footer-column.links a {
+            text-decoration: none; /* Remove sublinhado dos links */
+            color: #333; /* Cor dos links */
+        }
+
+        /* Estilos para os links quando passam o mouse */
+        .footer-column.links a:hover {
+            color: blue; /* Cor dos links ao passar o mouse */
+        }
+
+        /* Estilos para a linha de crédito */
+        .credit-line {background:#7edfd4;
+            margin-top: 00px; /* Espaçamento superior */
+            font-size: 15px; /* Tamanho da fonte */
+            color: #000; /* Cor do texto branco */
+            text-align: center;padding:30px;margin-bottom:0px;text-transform:uppercase;font-weight: bold;
+        }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Adicionando estilo para os contêineres de coluna */
+.alunos {
+    display: flex;font-size:12px;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* Estilo para as listas de alunos */
+.alunos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo para o modal */
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Estilo para o balão */
+#balao {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    width: 600px;
+}
+
+/* Estilo para o botão de fechar */
+#fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #000;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="src/ca.js">
+
+    <script language="javascript" src="src/calculadora.js" type="text/javascript"></script>
+<script language="javascript" src="src/contador.js" type="text/javascript"></script>
+<script language="javascript" src="src/data.js" type="text/javascript"></script>
+<script language="javascript" src="src/mod.js" type="text/javascript"></script>
+<script language="javascript" src="src/sanfona.js" type="text/javascript"></script>
+<script language="javascript" src="src/scroll.js" type="text/javascript"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+
+    <div class="warning-bar" id="warning-bar">
+        O aquecimento global se tornará irreversível em <span id="countdown"></span> dias. A hora de agir é agora.
+    </div>
+
+
+
+<div class="navbar">
+    <a href="#" class="navbar-logo">EVOLUX</a>
+    <div class="navbar-right">
+<a href="#calculadora" class="navbar-button" onclick="scrollToCalculator()">Calculadora de Consumo</a> <!-- Botão para a calculadora de consumo -->
+    </div>
+</div>
+
+
+<div class=hea></div>
+
+    <!-- Texto sobre o site -->
+    <div class="blue-section">
+        <div class="blue-section-content">
+            <img src="https://iili.io/JjRhFqb.png" alt="Imagem">
+            <div class="blue-section-text">
+ <p>Esse site foi feito para te ajudar a calcular quanto de energia os seus aparelhos gastam. Com a
+    calculadora, você consegue ter uma ideia de quanto vai gastar por mês e quanto isso vai te
+    custar. Isso vai te ajudar a usar energia de um jeito mais consciente em casa. E ainda tem dicas
+    para economizar energia e pagar menos na sua conta de luz.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container2">
+
+<h3>FONTES DE ENERGIA</h3>
+
+        <div class="box">
+            <img src="https://i.pinimg.com/originals/a0/95/cf/a095cf1302d972fba6b1bb269bbe2fc4.png"  alt="Logo" style="width: 40px;">
+<p>A energia tradicional é aquela obtida a partir de fontes não renováveis, como petróleo, carvão e gás natural. Essas fontes de energia são amplamente utilizadas há décadas devido à sua alta densidade energética e facilidade de transporte. No entanto, seu uso excessivo tem impactos negativos no meio ambiente, como a emissão de gases de efeito estufa e a poluição do ar e da água.</p>
+       
+        </div>
+        <div class="box2">
+            <img src="https://emojiisland.com/cdn/shop/products/The_Sun_Emoji_large.png?v=1571606063" alt="Fontes Alternativas de Energia">
+              <p>As fontes alternativas de energia são aquelas obtidas a partir de recursos renováveis e de baixo impacto ambiental. Exemplos incluem energia solar, eólica, hidrelétrica, biomassa e geotérmica. Essas fontes de energia são fundamentais para reduzir a dependência de combustíveis fósseis e mitigar os efeitos das mudanças climáticas.</p>
+        </div>
+    </div>
+
+<div id="calculadora" class=mostra>
+    <div class="containeras">
+        <p><span id="consumed">0</span> kilowatts de energia já foram consumidos no mundo desde que você acessou essa página.</p>
+    </div>
+
+</div>
+
+    <div class="centered-content">        
+<h3>Calculadora de Consumo de Energia</h3>
+        <h2>Calculadora de Consumo de Energia</h2>
+</div>
+<div class="container">
+<br>
+        <label for="appliance">Selecione ou Insira a Potência do Aparelho:</label>
+        <select id="appliance" onchange="selectAppliance()">
+    <option value="">Escolha um aparelho...</option>
+    <option value="60">Lâmpada Incandescente (60W)</option>
+    <option value="9">Lâmpada LED (9W)</option>
+    <option value="300">Ar Condicionado (300W) </option>
+    <option value="100">Televisão (100W)</option>
+    <option value="1500">Chuveiro Elétrico (1500W)</option>
+    <option value="800">Ferro de Passar (800W)</option>
+    <option value="1200">Secador de Cabelo (1200W)</option>
+    <option value="700">Máquina de Lavar Roupa (700W)</option>
+    <option value="120">Computador (120W)</option>
+    <option value="700">Geladeira (700W)</option>
+    <option value="500">Micro-ondas (500W)</option>
+    <option value="750">Liquidificador (750W)</option>
+    <option value="400">Forno Elétrico (400W)</option>
+    <option value="30">Robô Aspirador (30W)</option>
+    <option value="1500">Maquinas De Lavar Roupa (1500W)</option>
+    <option value="600">Cafeteira (600W) </option>
+    <option value="1500">Frigideira Elétrica (1500W) </option>
+    <option value="650">Máquina de pão (650W) </option>
+    <option value="120">Ventilador (120W) </option>
+    <option value="300">Processadores de alimentos (300W) </option>
+    <option value="6000">Fogão Elétrico (6000W) </option>
+    <option value="2500">Cooktop (2500W) </option>
+    <option value="500">Batedeira (500W) </option>
+    <option value="800">Coifa (800W) </option>
+    <option value="1100">Panela elétrica (1100W) </option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+
+<div id="manualInputs">
+    <label for="manualWattage">Potência do Aparelho (Watts):</label>
+    <input type="number" id="manualWattage" placeholder="Digite a potência em watts">
+</div>
+
+        <label for="hours">Horas de Uso por Dia:</label>
+        <input type="number" id="hours" placeholder="Digite as horas de uso por dia">
+
+        <label for="days">Dias de Uso por Mês:</label>
+        <input type="number" id="days" placeholder="Digite os dias de uso por mês" max="31"> <!-- Definindo o limite -->
+
+        <button onclick="calculateEnergy()">Calcular</button>
+
+        <div id="loader" class="loader"></div>
+
+        <div id="result"></div>
+        
+        
+        <div id="explanation" class="explanation"></div>
+<div id="solarResult" class="solar-result"></div>
+
+<h2>Histórico de Contas</h2>
+<ul id="historyList"></ul>
+<p>Total de Todas as Contas: <span id="totalCost">R$ 0.00</span></p>
+
+
+    </div>
+<div class=containerb><img src=https://cdn-icons-png.freepik.com/256/10995/10995796.png><br><center>A bandeira tributária atual é <v>verde</v>, portanto não há cobrança de taxa extra.</center></div>
+
+
+<div class=containerba>Os valores apresentados são sempre aproximados. O valor real pode ser maior ou menor. Consulte o valor atualizado do KWh nos canais oficiais da CEMIG. </div>
+
+
+<div class=fundoc><img src=https://cdn-icons-png.flaticon.com/512/182/182313.png></div>
+
+
+
+<center><h6>PERGUNTAS FREQUENTES </H6></center>
+ <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>O que é a bandeira tarifária na conta de energia?</h3>
+                <span class="toggle-btn">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>A bandeira tarifária é um sistema adotado no Brasil para sinalizar aos consumidores as condições de geração de energia elétrica e seus impactos nos custos da eletricidade. Este sistema foi implementado pela Agência Nacional de Energia Elétrica (ANEEL) em 2015.
+
+A ideia é informar os consumidores sobre as condições de operação do sistema elétrico nacional, especialmente em relação ao custo de geração de energia. Existem três cores de bandeiras tarifárias:
+
+    Verde: indica condições favoráveis de geração de energia, com custo baixo. Não há acréscimo na conta de energia.
+    Amarela: indica condições de geração menos favoráveis, com custo moderado. Nesse caso, há um acréscimo na conta de energia para compensar os custos extras de geração.
+    Vermelha: pode ser acionada em dois níveis: vermelha patamar 1 e vermelha patamar 2. Indicam condições de geração desfavoráveis, com custo mais alto. Para o patamar 1, o acréscimo na conta de energia é maior do que na bandeira amarela. Já para o patamar 2, o acréscimo é ainda maior, refletindo uma situação mais crítica.
+
+Essas bandeiras são atualizadas mensalmente com base em diversos fatores, como nível dos reservatórios das hidrelétricas, condições climáticas, custo de geração de energia por fonte, entre outros. A ideia é promover o consumo consciente de energia, incentivando os consumidores a reduzirem o consumo nos períodos de bandeira tarifária mais cara.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Como minha conta de energia é calculada?</h3>
+                <span class="toggle-btn">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>    Consumo de energia: Este é o principal componente da conta e é medido em quilowatt-hora (kWh). A quantidade de kWh consumidos é multiplicada pelo preço por kWh, que varia de acordo com a tarifa e os impostos aplicáveis.</p>
+
+    <p>Tarifas: As tarifas de energia elétrica são estabelecidas pelas concessionárias de energia elétrica e aprovadas pela Agência Nacional de Energia Elétrica (ANEEL). Elas podem variar de acordo com a classe de consumo (residencial, comercial, industrial), a faixa de consumo (quanto mais se consome, mais caro o kWh pode ficar) e a voltagem (baixa ou alta tensão).</p>
+
+   <p> Impostos: Impostos como o ICMS (Imposto sobre Circulação de Mercadorias e Serviços), PIS (Programa de Integração Social) e COFINS (Contribuição para o Financiamento da Seguridade Social) podem ser aplicados à conta de energia elétrica. A alíquota de cada imposto pode variar de acordo com o estado e a legislação vigente.</p>
+
+    <p>Encargos adicionais: Em algumas situações, podem ser aplicados encargos adicionais na conta de energia elétrica. Isso pode incluir custos relacionados à transmissão e distribuição de energia, contribuições para programas de eficiência energética, custos de bandeiras tarifárias (como mencionado anteriormente), entre outros.</p>
+
+<p>O cálculo final da conta de energia elétrica é a soma de todos esses elementos. É importante ressaltar que os consumidores podem ter acesso a informações detalhadas sobre o cálculo de sua conta de energia por meio da fatura enviada pela concessionária de energia elétrica.</p>
+            </div>
+        </div>
+
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Como descobrir a potência em Watts do meu aparelho?</h3>
+                <span class="toggle-btn">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Para descobrir a potência em watts (W) do seu aparelho, você pode seguir algumas abordagens:
+
+    Verifique o Manual do Usuário: O manual do usuário do aparelho geralmente fornece informações detalhadas sobre suas especificações, incluindo a potência em watts.
+
+    Etiqueta ou Placa de Identificação: Muitos aparelhos têm uma etiqueta ou placa de identificação que exibe informações importantes, como a potência em watts. Esta etiqueta pode estar localizada na parte traseira, inferior ou lateral do aparelho.
+
+    Pesquise Online: Se você não tiver acesso ao manual do usuário ou não conseguir encontrar uma etiqueta com as especificações, uma pesquisa online pelo modelo do seu aparelho pode fornecer informações sobre sua potência em watts.
+
+    Medição Direta com um Wattímetro: Se as opções acima não estiverem disponíveis, você pode usar um wattímetro para medir diretamente a potência do seu aparelho. Um wattímetro é um dispositivo simples que você conecta entre o aparelho e a tomada para medir a potência que o aparelho consome quando está em uso.
+
+</p>
+            </div>
+        </div>
+
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Quais são os impostos cobrados na fatura de energia?</h3>
+                <span class="toggle-btn">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Os impostos cobrados na fatura de energia são: PIS, COFINS, o ICMS e a Contribuição para
+                    Iluminação Pública.
+                   <p>O PIS tem a finalidade de financiar o seguro desemprego e o COFINS de financiar as despesas
+                    das áreas de saúde, previdência e assistência social. As alíquotas são: PIS: 1,65% COFINS:
+                    7,6%. Mas lembre-se que esses valores podem variar, pois, seguem regime não cumulativo.
+                    Já o ICMS é um imposto estadual e tem percentual diferente para cada Unidade Consumidora.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Como funciona a geração de energia elétrica?</h3>
+                <span class="toggle-btn">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>A energia elétrica funciona através da conversão de energia por meio de diversos combustíveis,
+                    sejam eles gerados pela força da água, do vento ou pela luz solar.</p>
+                    
+                    <p>No Brasil, a forma de geração de energia elétrica mais comum é pela força da água
+                    movimentando turbinas (energia hidrelétrica). Dessa forma, há o represamento da água para
+                    definir um desnível e enviá-la às turbinas, a fim de realizar a conversão de energia disponível
+                    em eletricidade, que será distribuída para consumo.
+                    Além disso, existem outras formas de geração de energia elétrica, como a partir das fontes
+                    alternativas, como é o caso da energia fotovoltaica, que realiza a captação da luz do sol e a
+                    converte em energia elétrica, de modo limpo e renovável.
+</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Como as fontes de energia renovável podem ajudar a reduzir os custos de energia?</h3>
+                <span class="toggle-btn">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>A fonte de energia renovável, muitas vezes, tem custos operacionais mais baixos e não estão
+                    sujeitas as flutuações de preço dos combustíveis fosseis o que pode ajudar a reduzir os gastos e
+                    custos de energia a longo prazo.
+</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>É possível ter energia solar em casa? Como isso afeta minha conta de energia elétrica?</h3>
+                <span class="toggle-btn">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Sim, é possível instalar sistemas de energia solar em residências. Esses sistemas geralmente consistem em painéis solares fotovoltaicos que convertem a luz solar em energia elétrica. Dependendo do tamanho do sistema e da quantidade de energia gerada, é possível reduzir significativamente ou até mesmo eliminar a dependência da rede elétrica convencional. Em muitos casos, os consumidores podem até gerar créditos de energia através do sistema de compensação de energia (net metering), onde o excedente de energia gerada durante o dia é injetado na rede elétrica e compensado na conta de energia elétrica.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>O que é o horário de ponta na tarifa de energia elétrica?</h3>
+                <span class="toggle-btn">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>
+                    O horário de ponta é um período do dia em que a demanda por energia elétrica é mais alta, geralmente durante o período de pico de consumo, que pode variar dependendo da região. As concessionárias de energia podem aplicar tarifas diferenciadas durante esses períodos de pico, cobrando mais caro pela energia consumida. Para evitar custos extras, os consumidores podem tentar reduzir o consumo durante esses horários, utilizando aparelhos de alta demanda energética fora do horário de ponta ou adotando medidas de eficiência energética.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+<div class="economy-tips">
+
+    <div class="icon-container">
+        <div class="icon-wrapper">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25018.png" alt="Ícone 1">
+            <div class="tip">Desligue equipamentos quando não estiverem em uso</div>
+        </div>
+        <div class="icon-wrapper">
+            <img src="https://cdn-icons-png.flaticon.com/512/61/61568.png" alt="Ícone 2">
+            <div class="tip">Utilize lâmpadas LED de baixo consumo</div>
+        </div>
+        <div class="icon-wrapper">
+            <img src="https://cdn-icons-png.flaticon.com/512/553/553402.png" alt="Ícone 3">
+            <div class="tip">Aproveite a luz natural durante o dia</div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<footer>
+    <div class="footer-columns">
+        <!-- Coluna da logo -->
+        <div class="footer-column logo">
+            <img src="https://iili.io/JNaRgna.png" alt="Logo" style="width: 510px;"> <!-- Substitua 'logo.png' pelo caminho da sua logo -->
+        </div>
+        <!-- Coluna dos links úteis -->
+        <div class="footer-column links">
+            <a href="https://colegiouniversitario.unipam.edu.br/">Site oficial</a> <!-- Substitua '#' pelo link desejado -->
+            <a href="https://www.instagram.com/colegiouniversitariounipam/">Instagram</a> <!-- Substitua '#' pelo link desejado -->
+            <a href="https://www.facebook.com/unipam">Facebook</a> <!-- Substitua '#' pelo link desejado -->
+        </div>
+        <!-- Coluna dos links úteis -->
+        <div class="footer-column links">
+            <a href="https://www.trilhasdefuturo.mg.gov.br/index.html">Trilhas de Futuro</a> <!-- Substitua '#' pelo link desejado -->
+<a href="#" id="mostrarBalao">Alunos desenvolvedores</a>
+
+        </div>
+        <!-- Coluna dos links úteis -->
+        <div class="footer-column links">
+
+        </div>
+
+    </div>
+</footer>
+<!-- Linha de crédito -->
+<p class="credit-line"> Desenvolvido pelos alunos do curso Técnico em Informática do Colégio Universitário - UNIPAM</p>
+
+<div id="modal"></div>
+
+<div id="balao">
+    <p>Alunos responsáveis:</p>
+    <div class="alunos">
+        <div class="column">
+            <ul>
+                <li>Maria Eduarda Alves Porto</li>
+                <li>Daniel Pereira Silva</li>
+                <li>Daniel Campos Xavier</li>
+                <li>Maria Luiza Santos Guimarães</li>
+                <li>Letícia Rodrigues Silva</li>
+                <li>Davi Henrique Gomes Ferreira</li>
+                <li>Maria Eduarda Oliveira Araújo</li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li>Eduarda Isabella da Silva Lima</li>
+                <li>Laênia Cristina de Magalhães</li>
+                <li>Yan Henrique Fagundes Araujo</li>
+                <li>Dionísio Miguel Pereira</li>
+                <li>Thiago Silva Tonelli</li>
+                <li>Evaní Aparecida Gomes</li>
+                <li>Levi Fernandes Campos</li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li>Luís Fernando Silva Guimarães</li>
+                <li>Victor Silva Vida</li>
+                <li>Gabriel Silva Rocha</li>
+                <li>Luis Gustavo Magalhães Oliveira</li>
+                <li>Lucas Faria de Sousa</li>
+                <li>Allan Dos Reis Fonseca Paulista</li>
+            </ul>
+        </div>
+    </div>
+    <span id="fechar">Fechar</span>
+</div>
+
+
+  </body>
+</html>
