@@ -1,11 +1,1 @@
-tag <center> está obsoleto, futuramente elá sera retirada da web: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/center
 
-fiz umas alterações para ajudar o pessoal 🙌
-
-gostei muito do projeto de vocês, acho legal ultimamente o que a UNIPAM esta fazendo em
-abrir portas para cursos tecnicos, estudo a alguns anos, desde os 15, e sempre foi mais por curso online
-pq aqui na cidade os que tem eram muito caros, hoje tenho 20, comecei a trabalhar com programação com uns 17 no patos hoje
-hoje em dia sigo PJ com algumas empresas, mas parabens pelo projeto de vocês pessoal, ficou incrivel
-vao ser otimos desenvolvedores, e parabens ao professor tambem, pq ensinar a programar é mais dificil do que aprender.
-
-haha boa possoal!
