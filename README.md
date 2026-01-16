@@ -1,5 +1,11 @@
 # EVOLUX - Calculadora de Consumo de Energia
 
+[![Demo](https://img.shields.io/badge/Demo-Acesse%20o%20Site-7edfd4?style=for-the-badge)](https://mattsousas.github.io/energia/)
+
+🔗 **[Acesse o site ao vivo](https://mattsousas.github.io/energia/)**
+
+---
+
 Desenvolvido pelos alunos do curso Técnico em Informática do Colégio Universitário - UNIPAM.
 
 ## Sobre o Projeto
